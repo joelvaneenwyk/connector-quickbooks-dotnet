@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    
+
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
-        
+        <TargetFrameworks>netstandard2.1</TargetFrameworks>
+
     </PropertyGroup>
 
 
@@ -20,19 +20,19 @@
     <ProjectReference Include="..\..\..\Code\Intuit.Ipp.QueryFilter\Intuit.Ipp.QueryFilter.csproj" />
     <ProjectReference Include="..\..\..\Code\Intuit.Ipp.ReportService\Intuit.Ipp.ReportService.csproj" />
     <ProjectReference Include="..\..\..\Code\Intuit.Ipp.Retry\Intuit.Ipp.Retry.csproj" />
-   
+
     <ProjectReference Include="..\..\..\Code\Intuit.Ipp.Core\Intuit.Ipp.WebHooksService.csproj" />
-  
+
   </ItemGroup>-->
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-        
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+
     </ItemGroup>
     <ItemGroup>
        <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
-       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
        <PackageReference Include="Microsoft.NETCore.Targets" Version="2.1.0" />
-       <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />      
+       <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
        <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
        <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
@@ -41,7 +41,7 @@
        <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
        <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
        <PackageReference Include="Serilog.Sinks.Trace" Version="2.0.0" />
-       <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+       <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Properties\" />
@@ -104,6 +104,6 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
-    
+
 
 </Project>
