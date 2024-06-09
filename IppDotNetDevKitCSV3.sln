@@ -1,15 +1,14 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "IPPDotNetDevKitCSV3\Code\Security", "{D65F7456-F8DB-4EC0-8C03-C22961C80649}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{D65F7456-F8DB-4EC0-8C03-C22961C80649}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "IPPDotNetDevKitCSV3\Code\Common", "{8A94E382-5E13-467F-9564-FFE47D0B4646}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8A94E382-5E13-467F-9564-FFE47D0B4646}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataService", "IPPDotNetDevKitCSV3\Code\DataService", "{697C38AE-D094-4D77-BD08-C15BD1B2BB7B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataService", "DataService", "{697C38AE-D094-4D77-BD08-C15BD1B2BB7B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "IPPDotNetDevKitCSV3\Code\UnitTests", "{EEB954D6-D751-4E7F-BEC3-8D10CC55FF81}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{EEB954D6-D751-4E7F-BEC3-8D10CC55FF81}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.Diagnostics", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.Diagnostics\Intuit.Ipp.Diagnostics.csproj", "{34F2D8E7-2239-4EE0-AE53-3B8F6B0513BB}"
 EndProject
@@ -17,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.Utility", "IPPDo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.Exception", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.Exception\Intuit.Ipp.Exception.csproj", "{0C815166-B7AC-45DF-AA48-0B026687228E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "IPPDotNetDevKitCSV3\Code\API", "{D1049A30-DC40-4FC8-923D-AF59779D1F94}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{D1049A30-DC40-4FC8-923D-AF59779D1F94}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.DataService", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.DataService\Intuit.Ipp.DataService.csproj", "{2A5A9D95-9CE2-4726-A9E2-606838ABDCD1}"
 EndProject
@@ -50,12 +49,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XSD", "XSD", "{711574A5-0FC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.XsdExtension", "IPPDotNetDevKitCSV3\Tools\XsdExtension\Intuit.Ipp.XsdExtension\Intuit.Ipp.XsdExtension.csproj", "{B66D0AB3-36DF-4E0A-83E0-772D31C6108C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEC31404-E957-447F-9E31-D80F64D708F5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "{root}", "{root}", "{DEC31404-E957-447F-9E31-D80F64D708F5}"
 	ProjectSection(SolutionItems) = preProject
-		Directory.Build.props = IPPDotNetDevKitCSV3\Code\Directory.Build.props
-		Local.testsettings = IPPDotNetDevKitCSV3\Code\Local.testsettings
-		logo.png = IPPDotNetDevKitCSV3\Code\logo.png
-		TraceAndTestImpact.testsettings = IPPDotNetDevKitCSV3\Code\TraceAndTestImpact.testsettings
+		.DS_Store = .DS_Store
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+		License.md = License.md
+		os-project-logo.svg = os-project-logo.svg
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.ReportService", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.ReportService\Intuit.Ipp.ReportService.csproj", "{43C587BD-F5EE-46B8-A52A-BBD3CA6C1C74}"
@@ -73,7 +74,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.WebhooksService.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.QueryFilter.Test", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.QueryFilter.Test\Intuit.Ipp.QueryFilter.Test.csproj", "{CE6A8BE5-23E1-4BE1-8343-9C48374F7672}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth2Client", "IPPDotNetDevKitCSV3\Code\OAuth2Client", "{1438B09F-C188-4F16-A00B-B037D8DD271C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth2Client", "OAuth2Client", "{1438B09F-C188-4F16-A00B-B037D8DD271C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intuit.Ipp.OAuth2PlatformClient.Test", "IPPDotNetDevKitCSV3\Code\Intuit.Ipp.OAuth2PlatformClient.Test\Intuit.Ipp.OAuth2PlatformClient.Test.csproj", "{6FA32031-6520-4A6F-BFFA-227EEC56B292}"
 EndProject
@@ -984,7 +985,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{697C38AE-D094-4D77-BD08-C15BD1B2BB7B} = {D1049A30-DC40-4FC8-923D-AF59779D1F94}
-		{EEB954D6-D751-4E7F-BEC3-8D10CC55FF81} = {DEC31404-E957-447F-9E31-D80F64D708F5}
 		{34F2D8E7-2239-4EE0-AE53-3B8F6B0513BB} = {8A94E382-5E13-467F-9564-FFE47D0B4646}
 		{1A06430B-308C-49CF-9620-70D4F7D8A501} = {8A94E382-5E13-467F-9564-FFE47D0B4646}
 		{0C815166-B7AC-45DF-AA48-0B026687228E} = {8A94E382-5E13-467F-9564-FFE47D0B4646}
@@ -1013,7 +1013,7 @@ Global
 		{F2A9CA04-DA01-44CA-A18D-704948C836EB} = {EEB954D6-D751-4E7F-BEC3-8D10CC55FF81}
 		{160733CB-F539-4545-BEF4-F57176FD12DE} = {D65F7456-F8DB-4EC0-8C03-C22961C80649}
 		{C65E5969-E551-456A-AC79-AA625CC97C7E} = {EEB954D6-D751-4E7F-BEC3-8D10CC55FF81}
-		{C7499C40-3068-4B1F-921C-3D63DA9A94EC} = {DEC31404-E957-447F-9E31-D80F64D708F5}
+		{C7499C40-3068-4B1F-921C-3D63DA9A94EC} = {8A94E382-5E13-467F-9564-FFE47D0B4646}
 		{494E9C14-07CA-4CF3-AFD8-6C8D68F250C7} = {1438B09F-C188-4F16-A00B-B037D8DD271C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
