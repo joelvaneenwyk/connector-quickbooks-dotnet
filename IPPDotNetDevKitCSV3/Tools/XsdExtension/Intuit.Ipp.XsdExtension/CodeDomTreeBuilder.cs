@@ -13,8 +13,8 @@ namespace Intuit.Ipp.XsdExtension
     using System.Xml.Serialization;
 
     /// <summary>
-   /// Build CodeDom tree in memory
-   /// </summary>
+    /// Build CodeDom tree in memory
+    /// </summary>
     internal class CodeDomTreeBuilder : IXsdExtensionTask
     {
         /// <summary>
@@ -23,11 +23,12 @@ namespace Intuit.Ipp.XsdExtension
         /// <param name="xsdContext">Holds data about XSD schema</param>
         /// <param name="codeDomContext">Holds codeDomTree</param>
         public void Execute(XsdContext xsdContext, CodeDomContext codeDomContext)
-        {            
-             XmlSchemaImporter schemaImporter = new XmlSchemaImporter(xsdContext.XmlSchemas);
-            
+        {
+            XmlSchemaImporter schemaImporter = new XmlSchemaImporter(xsdContext.XmlSchemas);
+
             // Step 1:  Create code namespace            
-             xsdContext.CodeExporter = new XmlCodeExporter(codeDomContext.CodeNamespace);
+            // #todo #jve
+            //xsdContext.CodeExporter = new XmlCodeExporter(codeDomContext.CodeNamespace);
 
             List<object> maps = new List<object>();
 
@@ -46,10 +47,11 @@ namespace Intuit.Ipp.XsdExtension
             }
 
             // export object collection to namespace. Now defined namespace will have all schema objects such as complexTypes, simpleTypes etc.
-            foreach (XmlTypeMapping map in maps)
-            {
-                xsdContext.CodeExporter.ExportTypeMapping(map);
-            }
+            // #todo #jve
+            //foreach (XmlTypeMapping map in maps)
+            //{
+            //    xsdContext.CodeExporter.ExportTypeMapping(map);
+            //}
         }
     }
 }

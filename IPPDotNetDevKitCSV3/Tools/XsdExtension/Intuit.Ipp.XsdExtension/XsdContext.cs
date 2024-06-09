@@ -30,7 +30,8 @@ namespace Intuit.Ipp.XsdExtension
         /// <summary>
         /// Exports compiled schema to code namespace
         /// </summary>
-        private XmlCodeExporter codeExporter;
+        // #todo #jve
+        //private XmlCodeExporter codeExporter;
 
         #region Constructor
         /// <summary>
@@ -42,15 +43,16 @@ namespace Intuit.Ipp.XsdExtension
         #endregion
 
         #region Public Properties
-        
+
         /// <summary>
         /// Gets or sets exporter to export code from xsd schema to codedom
         /// </summary>
-        public XmlCodeExporter CodeExporter
-        {
-            get { return this.codeExporter; }
-            set { this.codeExporter = value; }
-        }
+        // #todo #jve
+        // public XmlCodeExporter CodeExporter
+        // {
+        //     get { return this.codeExporter; }
+        //     set { this.codeExporter = value; }
+        // }
 
         /// <summary>
         /// Gets or sets list of Schema

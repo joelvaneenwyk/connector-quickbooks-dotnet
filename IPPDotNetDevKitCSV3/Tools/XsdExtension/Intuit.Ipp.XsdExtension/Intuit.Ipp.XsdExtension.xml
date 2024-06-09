@@ -576,19 +576,9 @@
             List of Schema objects
             </summary>
         </member>
-        <member name="F:Intuit.Ipp.XsdExtension.XsdContext.codeExporter">
-            <summary>
-            Exports compiled schema to code namespace
-            </summary>
-        </member>
         <member name="M:Intuit.Ipp.XsdExtension.XsdContext.#ctor">
             <summary>
             Initializes a new instance of the XsdContext class
-            </summary>
-        </member>
-        <member name="P:Intuit.Ipp.XsdExtension.XsdContext.CodeExporter">
-            <summary>
-            Gets or sets exporter to export code from xsd schema to codedom
             </summary>
         </member>
         <member name="P:Intuit.Ipp.XsdExtension.XsdContext.XmlSchemaList">

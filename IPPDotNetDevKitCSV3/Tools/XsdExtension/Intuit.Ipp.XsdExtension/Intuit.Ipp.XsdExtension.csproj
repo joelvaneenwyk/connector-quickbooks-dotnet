@@ -2,21 +2,24 @@
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyTitle>Intuit.Sb.CDM</AssemblyTitle>
     <Product>Intuit.Sb.CDM</Product>
     <DebugType>full</DebugType>
     <DocumentationFile>$(BaseOutputPath)$(MSBuildProjectName).xml</DocumentationFile>
     <AssemblyOriginatorKeyFile>..\..\..\Code\SigningKeys\DotNetSdkForQuickBooksApiV3.snk</AssemblyOriginatorKeyFile>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="App.config" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="DevDefined.OAuth" Version="0.2" />
-
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="4.1.0" />
+    <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Configuration" />
