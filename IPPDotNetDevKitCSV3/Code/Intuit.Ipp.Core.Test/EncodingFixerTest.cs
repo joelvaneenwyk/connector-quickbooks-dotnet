@@ -1,6 +1,6 @@
-﻿using System.Text;
 using Intuit.Ipp.Core.Rest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text;
 
 namespace Intuit.Ipp.Core.Test
 {
@@ -63,6 +63,7 @@ namespace Intuit.Ipp.Core.Test
         ///A test for FixQuickBaseEncoding
         ///</summary>
         [TestMethod]
+        [ExpectedException(typeof(System.Text.DecoderFallbackException), AllowDerivedTypes = true)]
         public void EncodingFixerExpectedExceptionTest()
         {
             byte[] bytes = new byte[] { 0xFF, 150 };
