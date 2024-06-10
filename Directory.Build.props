@@ -21,13 +21,14 @@
 
   <!-- Set Base Variables -->
   <PropertyGroup>
-    <ProjectUrl>https://github.com/joelvaneenwyk/everything-cli</ProjectUrl>
+    <ProjectUrl>https://github.com/joelvaneenwyk/connector-quickbooks-dotnet</ProjectUrl>
 
     <!-- SolutionDir is not defined when building projects explicitly -->
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(WorkspaceFolder)</SolutionDir>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
 
-    <VSToolsPath Condition="'$(VSToolsPath)' == '' and Exists('$(MSBuildExtensionsPath32)/Microsoft/VisualStudio/v$(VisualStudioVersion)')">$(MSBuildExtensionsPath32)/Microsoft/VisualStudio/v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath
+      Condition="'$(VSToolsPath)' == '' and Exists('$(MSBuildExtensionsPath32)/Microsoft/VisualStudio/v$(VisualStudioVersion)')">$(MSBuildExtensionsPath32)/Microsoft/VisualStudio/v$(VisualStudioVersion)</VSToolsPath>
 
     <RepoDir Condition="'$(RepoDir)' == ''">$(MSBuildThisFileDirectory)</RepoDir>
   </PropertyGroup>
@@ -50,7 +51,8 @@
 
   <!--
     IMPORTANT: Traversals left in a directory will break some tools like midl, but we also cannot call
-    [MSBuild]::NormalizeDirectory on relative paths since cwd is not always correct. This logic should prefer to operate
+    [MSBuild]::NormalizeDirectory on relative paths since cwd is not always correct. This logic should
+  prefer to operate
     on full paths and avoid extra normalization.
   -->
   <PropertyGroup Label="Configuration">
@@ -79,6 +81,8 @@
     <RestoreForceEvaluate Condition="'$(RestoreForceEvaluate)' == ''">false</RestoreForceEvaluate>
 
     <DocumentationFile>$(RootOutDir)\$(MSBuildProjectName).xml</DocumentationFile>
+
+    <NoWarn>SYSLIB0011;CS1591;MSB3243;CS1587;CS0168;NU1701;CS0414</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -90,7 +94,6 @@
     <PlatformTarget>$(Platform)</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <LinkIncremental>true</LinkIncremental>
-    <NoWarn>SYSLIB0011</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -101,6 +104,49 @@
     <PlatformTarget>$(Platform)</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <LinkIncremental>false</LinkIncremental>
-    <NoWarn>SYSLIB0011</NoWarn>
   </PropertyGroup>
+
+  <!--
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == ''">$(MSBuildThisFileDirectory)\</SolutionDir>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)artifacts\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <BaseOutputPath Condition=" '$(BaseOutputPath)' == ''
+  ">$(MSBuildThisFileDirectory)artifacts\bin\</BaseOutputPath>
+    <DocumentationFile>$(BaseOutputPath)$(MSBuildProjectName).xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <DebugType Condition=" '$(Configuration)' == 'Debug' ">Full</DebugType>
+    <DebugType Condition=" '$(Configuration)' == 'Release' ">pdbonly</DebugType>
+  <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb;.xml</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <NoLogo>true</NoLogo>
+    <PackageOutputPath>$(SolutionDir)artifacts\nupkg</PackageOutputPath>
+    <PackageIcon>$(MSBuildThisFileDirectory)logo.png</PackageIcon>
+    <OutputPath>$(SolutionDir)artifacts\bin</OutputPath>
+    <Copyright>Copyright © 2020 Intuit, Inc.</Copyright>
+    <AssemblyVersion>14.6.3.7</AssemblyVersion>
+    <FileVersion>14.6.3.7</FileVersion>
+    <Company>Intuit</Company>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE2_1;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)' == 'net472'">
+    <DefineConstants>NET472;NETFULL</DefineConstants>
+
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)' == 'net461'">
+    <DefineConstants>NET461;NETFULL</DefineConstants>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+    -->
 </Project>
