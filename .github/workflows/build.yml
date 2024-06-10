@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: IppDotNetDevKitCSV3.sln # Replace with your solution name, i.e. MyWpfApp.sln.
+      Solution_Name: intuit-dotnet-devkit.sln # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: IPPDotNetDevKitCSV3\Test\Intuit.Ipp.Test\SDKV3Test\Intuit.Ipp.Test.csproj # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
 
     steps:
