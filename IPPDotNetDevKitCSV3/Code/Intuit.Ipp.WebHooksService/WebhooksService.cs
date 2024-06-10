@@ -88,7 +88,7 @@ namespace Intuit.Ipp.WebhooksService
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhooksService"/> class.
         /// </summary>
-        
+
         public WebhooksService()
         {
 
@@ -140,7 +140,7 @@ namespace Intuit.Ipp.WebhooksService
                     return false;
                 }
             }
-            catch(ValidationException)
+            catch (ValidationException)
             {
                 return false;
 
@@ -164,8 +164,6 @@ namespace Intuit.Ipp.WebhooksService
             return webhooksEvent;
         }
 
-
-
         /// <summary>
         /// Get Verifier Token value from config
         /// </summary>
@@ -173,14 +171,10 @@ namespace Intuit.Ipp.WebhooksService
         private string GetVerfierToken()
         {
             this.IppConfiguration = new JsonFileConfigurationProvider().GetConfiguration();
-            this.IppConfiguration.Logger.CustomLogger.Log(TraceLevel.Info, "Called GetVerifierToken method.");
+            this.IppConfiguration.Logger.CustomLogger.Log(Intuit.Ipp.Diagnostics.TraceLevel.Info, "Called GetVerifierToken method.");
             string verifierToken = this.IppConfiguration.VerifierToken.Value;
 
             return verifierToken;
-
-
         }
-
-
     }
 }

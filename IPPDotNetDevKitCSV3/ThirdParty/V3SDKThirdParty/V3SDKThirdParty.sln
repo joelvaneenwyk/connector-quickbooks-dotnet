@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newtonsoft.Json", "..\Newto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevDefined.OAuth.Tiny", "..\DevDefined.OAuth.Tiny\DevDefined.OAuth.Tiny\DevDefined.OAuth.Tiny.csproj", "{61B700B6-3911-4CEF-8751-7F426A765088}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExtender", "..\Linq Extender\LinqExtender.csproj", "{A2171F32-6AB4-4BA4-920B-EB1D28F5F7F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExtender", "..\Linq Extender\Intuit.Ipp.LinqExtender.csproj", "{A2171F32-6AB4-4BA4-920B-EB1D28F5F7F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

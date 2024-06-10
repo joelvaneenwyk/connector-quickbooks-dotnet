@@ -20,11 +20,11 @@
 // 
 ////********************************************************************
 
+using Intuit.Ipp.LinqExtender.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
-using Intuit.Ipp.LinqExtender.Abstraction;
 
 namespace Intuit.Ipp.LinqExtender
 {
@@ -51,7 +51,7 @@ namespace Intuit.Ipp.LinqExtender
         public IClassGenerator BuildDynamicAssembly()
         {
             AssemblyName assemblyName = new AssemblyName("ExtenderProxy");
-            AssemblyBuilder createdAssembly =  AppDomain.CurrentDomain.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
+            AssemblyBuilder createdAssembly = AppDomain.CurrentDomain.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
             // define module
             this.moduleBuilder = createdAssembly.DefineDynamicModule(assemblyName.Name);
 
@@ -140,7 +140,7 @@ namespace Intuit.Ipp.LinqExtender
 
                 // The property "set" and property "get" methods require a special
                 // set of attributes.
-                const MethodAttributes methodAttributes = MethodAttributes.Public | MethodAttributes.NewSlot|
+                const MethodAttributes methodAttributes = MethodAttributes.Public | MethodAttributes.NewSlot |
                                                           MethodAttributes.SpecialName | MethodAttributes.HideBySig | MethodAttributes.Virtual;
 
                 // Define the "get" accessor. 
@@ -176,7 +176,7 @@ namespace Intuit.Ipp.LinqExtender
                 builder.SetSetMethod(setAccessor);
             }
             properties.Add(name, value);
-          
+
             return this;
         }
         /// <summary>
@@ -195,7 +195,7 @@ namespace Intuit.Ipp.LinqExtender
             }
             else
             {
-                reflectedType = this.typeBuilder.CreateType();
+                reflectedType = this.typeBuilder.CreateTypeInfo();
                 isTypeCreated = true;
             }
 
