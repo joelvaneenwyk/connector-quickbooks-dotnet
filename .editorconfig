@@ -6,10 +6,14 @@ root = true
 [*]
 indent_style = space
 indent_size = 4
-end_of_line = crlf
-charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+line_length = 130
+
+printWidth = 130
 
 [*.{yml,yaml}]
+indent_size = 2
+
+[*.{vcxproj,csproj,Build.props,Build.targets}]
 indent_size = 2

@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "MLTable": "yaml",
+        "*.Build.props": "xml"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.formatOnSaveMode": "modificationsIfAvailable"
+    },
+    "xml.format.maxLineWidth": 400,
+    "evenBetterToml.formatter.columnWidth": 130,
+    "azureML.yaml.format.printWidth": 130,
+    "prettier.printWidth": 130,
+    "yaml.format.printWidth": 130,
+    "editor.minimap.maxColumn": 130
+}
